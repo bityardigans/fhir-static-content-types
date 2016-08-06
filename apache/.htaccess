@@ -1,0 +1,29 @@
+AddType application/fhir+json .json
+AddType application/fhir+xml .xml
+
+RewriteEngine On
+
+
+# Show how to map some explicit URLs
+RewriteCond %{HTTP:Accept} application/json [NC]
+RewriteRule ^patient-equivalent-to-example$ patient-example.json [L]
+
+RewriteCond %{HTTP:Accept} application/xml [NC]
+RewriteRule ^patient-equivalent-to-example$ patient-example.xml [L]
+
+RewriteCond %{HTTP:Accept} text/html [NC]
+RewriteRule ^patient-equivalent-to-example$ patient-example.html [L]
+
+
+
+# Show how to map URLs by regex
+
+RewriteCond %{HTTP:Accept} application/json [NC]
+RewriteRule ^examples/(.*)$ $1.json [L]
+
+RewriteCond %{HTTP:Accept} application/xml [NC]
+RewriteRule ^examples/(.*)$ $1.xml [L]
+
+RewriteCond %{HTTP:Accept} text/html [NC]
+RewriteRule ^examples/(.*)$ $1.html [L]
+
