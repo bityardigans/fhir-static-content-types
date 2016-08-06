@@ -7,7 +7,7 @@ $ git clone https://github.com/jmandel/fhir-static-content-types
 $ cd fhir-static-content-types
 ```
 
-### Run and it (nginx)
+### Run and test it (nginx)
 
 ```
 $ sh example-nginx.sh
@@ -33,7 +33,7 @@ $ curl -s -H "Accept: application/fhir+json"  http://localhost:8000/patient-exam
 ```
 
 
-### Run and it (apache)
+### Run and test it (apache)
 
 ```
 $ sh example-apache.sh
