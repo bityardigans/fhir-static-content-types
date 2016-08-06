@@ -1,5 +1,5 @@
 # fhir-static-content-types
-Demonstrate serving FHIR spec statically with nginx, respecting content types
+Demonstrate serving the FHIR specification statically with nginx, respecting content types — Edit
 
 ## Run it
 ```
